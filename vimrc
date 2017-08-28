@@ -19,6 +19,11 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'valloric/youcompleteme'
 Plugin 'pangloss/vim-javascript'
+Plugin 'honza/vim-snippets'
+Plugin 'sirver/ultisnips'
+Plugin 'mattn/emmet-vim'
+Plugin 'Valloric/MatchTagAlways'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,7 +45,20 @@ set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
-filetype plugin indent on
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_w = 0
+let g:syntastic_python_checkers = ['pep8', 'pylint']
+let g:syntastic_html_checkers = ['w3']
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+set et
+
+syntax on
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -57,3 +75,4 @@ let g:airline_theme='badwolf'
 set backspace=indent,eol,start
 
 map <Leader>n :NERDTreeToggle<CR>
+
