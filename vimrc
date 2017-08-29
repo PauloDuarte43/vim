@@ -23,7 +23,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'sirver/ultisnips'
 Plugin 'mattn/emmet-vim'
 Plugin 'Valloric/MatchTagAlways'
-Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,8 +49,11 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_w = 0
-let g:syntastic_python_checkers = ['pep8', 'pylint']
-let g:syntastic_html_checkers = ['w3']
+
+" let g:syntastic_python_checkers = ['pep8', 'pylint']
+let g:syntastic_python_checkers = []
+" let g:syntastic_html_checkers = ['w3']
+let g:syntastic_html_checkers = []
 
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
@@ -68,7 +70,7 @@ set expandtab
 
 set encoding=utf-8
 set background=dark
-colorscheme solarized
+colorscheme desert
 
 let g:airline_theme='badwolf'
 
