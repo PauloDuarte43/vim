@@ -23,7 +23,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'sirver/ultisnips'
 Plugin 'mattn/emmet-vim'
 Plugin 'Valloric/MatchTagAlways'
-Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
