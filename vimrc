@@ -17,12 +17,12 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'valloric/youcompleteme'
 Plugin 'pangloss/vim-javascript'
 Plugin 'honza/vim-snippets'
 Plugin 'sirver/ultisnips'
 Plugin 'mattn/emmet-vim'
 Plugin 'Valloric/MatchTagAlways'
+Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -49,9 +49,11 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_w = 0
+let g:syntastic_loc_list_height=3
+let g:syntastic_aggregate_errors = 1
 
-" let g:syntastic_python_checkers = ['pep8', 'pylint']
-let g:syntastic_python_checkers = []
+let g:syntastic_python_checkers = ['pylint', 'flake8']
+" let g:syntastic_python_checkers = []
 " let g:syntastic_python_pylint_args = ""
 
 " let g:syntastic_html_checkers = ['w3']
@@ -78,5 +80,13 @@ let g:airline_theme='badwolf'
 
 set backspace=indent,eol,start
 
-map <Leader>n :NERDTreeToggle<CR>
+map <Leader>nn :NERDTreeToggle<CR>
 
+let g:jedi#popup_on_dot = 0
+let g:jedi#goto_command = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = ""
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
