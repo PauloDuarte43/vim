@@ -18,11 +18,13 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'pangloss/vim-javascript'
+Plugin 'nono/jquery.vim'
 Plugin 'honza/vim-snippets'
 Plugin 'sirver/ultisnips'
 Plugin 'mattn/emmet-vim'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,6 +60,7 @@ let g:syntastic_python_checkers = ['pylint', 'flake8']
 
 " let g:syntastic_html_checkers = ['w3']
 let g:syntastic_html_checkers = []
+let g:syntastic_mode_map = { 'mode': 'passive' }
 
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
@@ -81,6 +84,7 @@ let g:airline_theme='badwolf'
 set backspace=indent,eol,start
 
 map <Leader>nn :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
 
 let g:jedi#popup_on_dot = 0
 let g:jedi#goto_command = "<leader>d"
