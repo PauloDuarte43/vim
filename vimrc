@@ -28,6 +28,8 @@ Plugin 'Valloric/MatchTagAlways'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'luochen1990/rainbow'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -83,6 +85,8 @@ set background=dark
 colorscheme desert
 
 let g:airline_theme='badwolf'
+
+let g:rainbow_active = 1
 
 set backspace=indent,eol,start
 
