@@ -28,7 +28,8 @@ Plugin 'Valloric/MatchTagAlways'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'luochen1990/rainbow'
+Plugin 'oblitum/rainbow'
+
 
 
 " All of your Plugins must be added before the following line
@@ -87,6 +88,16 @@ colorscheme desert
 let g:airline_theme='badwolf'
 
 let g:rainbow_active = 1
+
+let g:rainbow_load_separately = [
+    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+    \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+    \ ]
+
+let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
 set backspace=indent,eol,start
 
